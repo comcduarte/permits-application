@@ -5,6 +5,15 @@ use User\Model\UserModel;
 $navHelper = $this->navigation('navigation');
 $iterator = new RecursiveIteratorIterator($this->container, RecursiveIteratorIterator::SELF_FIRST);
 
+if ($user = $this->currentUser()) {
+    $roles = [];
+    $memberofs = $user->memberOf();
+    foreach ($memberofs as $memberof) {
+        $roles[] = $memberof['ROLENAME'];
+    }
+    $navHelper->setRoles($roles);
+}
+
 $ulClass = "navbar-nav mr-auto";
 $liActiveClass = "active";
 $addClassToListItem = TRUE;

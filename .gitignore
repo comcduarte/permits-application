@@ -6,3 +6,7 @@ data/cache/*
 phpunit.xml
 composer.lock
 .phpunit.result.cache
+.settings/
+.buildpath
+.project
+config/autoload/local.php*

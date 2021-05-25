@@ -27,4 +27,11 @@ return [
     'Laminas\Router',
     'Laminas\Validator',
     'Application',
+    'Acl',
+    'Annotation',
+    'Components',
+    'Files',
+    'Report',
+    'Settings',
+    'User',
 ];
